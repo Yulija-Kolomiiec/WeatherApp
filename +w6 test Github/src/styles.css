@@ -106,3 +106,14 @@ h2 {
   margin-left: auto;
   margin-right: auto;
 }
+.signature {
+  max-width: 60%;
+  display: block;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-top: 20px;
+  align-items: center;
+  font-family: "Kaushan Script", cursive;
+  font-family: "Playfair Display", serif;
+  font-family: "Roboto Slab", serif;
+}
