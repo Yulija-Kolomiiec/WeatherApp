@@ -1,3 +1,12 @@
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+let myLocationButton = document.querySelector("#my-location-button");
+myLocationButton.addEventListener("click", getCurrentLocation);
+
+
 let now = new Date();
 let currentHour = now.getHours();
 if (currentHour < 10) {
@@ -20,8 +29,25 @@ function formatDate(date) {
     "Saturday",
   ];
 
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
   let currentDay = days[now.getDay()];
-  let timeNow = `${currentDay} ${currentHour}:${currentMinute}`;
+  let currentMonth = months[now.getMonth()];
+  let currentDate = now.getDate();
+  let timeNow = `${currentDay}, ${currentMonth} ${currentDate} | ${currentHour}:${currentMinute}`;
 
   return timeNow;
 }
@@ -87,11 +113,3 @@ function searchLocation(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
-
-function getCurrentLocation(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(searchLocation);
-}
-
-let myLocationButton = document.querySelector("#my-location-button");
-myLocationButton.addEventListener("click", getCurrentLocation);
