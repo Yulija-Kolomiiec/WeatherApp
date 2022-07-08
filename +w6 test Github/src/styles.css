@@ -1,34 +1,24 @@
 body {
   display: block;
-}
-.main {
   max-width: 60%;
-  display: block;
   margin: 0 auto;
   align-items: center;
 }
-h1 {
+.main {
+  display: block;
   font-family: "Kaushan Script", cursive;
   font-family: "Playfair Display", serif;
-  background: radial-gradient(
-    circle at -2.2% -3.8%,
-    rgb(249, 252, 113) 0%,
-    #7ad6fa 100.2%
-  );
-  opacity: full;
-  position: absolute;
-  top: 4px;
-  padding: 10px;
-  width: 60%;
+  margin-top: 4px;
+  font-size: xx-large;
 }
 form {
-  width: 98%;
-  position: absolute;
-  top: 80px;
   display: block;
+  align-items: center;
+  margin-top: 4px;
+  width: 101%;
 }
 input[type="text"] {
-  width: 47%;
+  width: 75%;
   height: 40px;
   box-sizing: border-box;
   border-radius: 4px;
@@ -39,81 +29,58 @@ input[type="text"] {
   font-family: "Roboto Slab", serif;
 }
 input[type="submit"] {
-  width: 7%;
+  width: 8%;
   height: 40px;
   box-sizing: border-box;
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 4px 8px;
   background-color: rgb(250, 254, 255);
-  font-size: larger;
+  font-size: medium;
   font-weight: bold;
   font-family: "Kaushan Script", cursive;
   font-family: "Playfair Display", serif;
   font-family: "Roboto Slab", serif;
 }
 .my-location-button {
-  width: 7%;
+  width: 15%;
   height: 40px;
   box-sizing: border-box;
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 4px 8px;
-  background-color: rgb(182, 238, 130);
-  font-size: small;
+  background-color: rgb(224, 243, 205);
+  font-size: medium;
   font-weight: bold;
   font-family: "Kaushan Script", cursive;
   font-family: "Playfair Display", serif;
   font-family: "Roboto Slab", serif;
 }
 
-h2 {
-  display: block;
+.weather-details {
+  margin-top: 4px;
   font-family: "Kaushan Script", cursive;
   font-family: "Playfair Display", serif;
-  width: 100%;
+  font-size: x-large;
 }
-.container-location {
-  margin-top: 130px;
-  font-family: "Kaushan Script", cursive;
-  font-family: "Playfair Display", serif;
+li {
+  list-style: none;
 }
-.container-weather {
-  font-family: "Kaushan Script", cursive;
-  font-family: "Playfair Display", serif;
-  font-family: "Roboto Slab", serif;
-  font-size: larger;
-}
-.card-group {
-  font-family: "Kaushan Script", cursive;
-  font-family: "Playfair Display", serif;
-}
-.list-group-item {
+.container {
   font-family: "Kaushan Script", cursive;
   font-family: "Playfair Display", serif;
   font-family: "Roboto Slab", serif;
+  font-size: medium;
+  margin-top: 4px;
+  padding: 0;
 }
-.container-city {
-  display: block;
-  margin: 0 220px;
-}
-.city-3 {
-  text-align: center;
-  font-family: "Kaushan Script", cursive;
-  font-family: "Playfair Display", serif;
-  font-family: "Roboto Slab", serif;
-  margin: 0 0;
-  margin-left: auto;
-  margin-right: auto;
+.card-body-heading {
+  background-color: #f3faf6;
+  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+  flex: 1 1 auto;
 }
 .signature {
-  max-width: 60%;
-  display: block;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-top: 20px;
-  align-items: center;
+  margin-top: 8px;
   font-family: "Kaushan Script", cursive;
   font-family: "Playfair Display", serif;
   font-family: "Roboto Slab", serif;
+  font-size: medium;
 }
