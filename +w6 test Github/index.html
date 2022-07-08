@@ -22,14 +22,7 @@
     />
   </head>
   <body>
-    <div class="main">
-    <h1>World Weather</h1>
-    <form id="search-form">
-      <input type="text" id="city-input" placeholder="Enter your city" autofocus />
-      <input type="submit" value="Search"/>
-      <button class="my-location-button" id="my-location-button">My Location</button>
-    </form>
-    <h2>
+ <div class="main">
       <div class="container-location">
         <div class="row">
   <div class="col-sm-6">
@@ -40,16 +33,24 @@
     </div>
   </div>
   <div class="col-sm-6">
-    <div class="card" style="background-color: #f3faf6;;">
+    <div class="card" style="background-color: #f3faf6;">
       <div class="card-body">
         <p class="card-text" id="current-time">  </p>
       </div>
     </div>
   </div>
 </div>
-    </h2>
-    <h3>
-            <div class="container-weather">
+</div>
+  </div>
+    
+    <form id="search-form">
+      <input type="text" id="city-input" placeholder="Enter your city" autofocus />
+      <input type="submit" value="Search"/>
+      <button class="my-location-button" id="my-location-button">My Location</button>
+    </form>
+   
+    <div class="weather-details"> 
+      <div class="container-weather">
         <div class="row">
   <div class="col-sm-4">
     <div class="card" style="background-color: #fbfcf3;">
@@ -81,15 +82,17 @@ Humidity, %: <span class="humidity" id="humidity"></span>
           </li>
         </ul>
         </p>
-    
-    </h3>
+    </div>
+</div>
+    </div>
+</div>
     <div class="container">
     <div class="card-group">
   <div class="card">
         <div class="card-2">
-          <div class="card-body" style="background-color: #f3faf6;">
+          <div class="card-body-heading">
             <h5 class="card-title" >May 28, 2022</h5>
-            <p class="card-text">☁️ ☀️ 🌧️ ⛅ ⛈️ ❄️</p>
+            <p class="card-text">☁️</p>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Weather: ☀️</li>
@@ -100,9 +103,9 @@ Humidity, %: <span class="humidity" id="humidity"></span>
         </div>
           <div class="card">
         <div class="card-2">
-          <div class="card-body" style="background-color: #f3faf6;">
+          <div class="card-body-heading">
             <h5 class="card-title">May 29, 2022</h5>
-            <p class="card-text">☁️ ☀️ 🌧️ ⛅ ⛈️ ❄️</p>
+            <p class="card-text">☁️☀️</p>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Weather: ⛅</li>
@@ -113,9 +116,9 @@ Humidity, %: <span class="humidity" id="humidity"></span>
       </div>
         <div class="card">
         <div class="card-2">
-          <div class="card-body" style="background-color: #f3faf6;">
+          <div class="card-body-heading">
             <h5 class="card-title">May 30, 2022</h5>
-            <p class="card-text">☁️ ☀️ 🌧️ ⛅ ⛈️ ❄️</p>
+            <p class="card-text">🌧️❄️</p>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Weather: ☀️</li>
@@ -126,9 +129,9 @@ Humidity, %: <span class="humidity" id="humidity"></span>
       </div>
         <div class="card">
         <div class="card-2">
-          <div class="card-body" style="background-color: #f3faf6;">
+          <div class="card-body-heading">
             <h5 class="card-title">May 31, 2022</h5>
-            <p class="card-text">☁️ ☀️ 🌧️ ⛅ ⛈️ ❄️</p>
+            <p class="card-text">⛅</p>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Weather: 🌧️</li>
@@ -139,9 +142,9 @@ Humidity, %: <span class="humidity" id="humidity"></span>
       </div>
         <div class="card">
         <div class="card-2">
-          <div class="card-body" style="background-color: #f3faf6;">
+          <div class="card-body-heading">
             <h5 class="card-title">June 1, 2022</h5>
-            <p class="card-text">☁️ ☀️ 🌧️ ⛅ ⛈️ ❄️</p>
+            <p class="card-text">⛈️</p>
           </div>
           <ul class="list-group list-group-flush" >
             <li class="list-group-item">Weather: ⛈️</li>
@@ -152,26 +155,6 @@ Humidity, %: <span class="humidity" id="humidity"></span>
       </div>
         </div>
       </div>
-    </div>
-    <hr />
-    <div class="container-city" >
-      <div class="row" >
-          <div class="city-3" style="width: 10rem">
-            <a href="https://www.google.com">New York</a>
-          </div>
-          <div class="city-3" style="width: 10rem">
-            <a href="https://www.google.com">London</a>
-          </div>
-          <div class="city-3" style="width: 10rem">
-            <a href="https://www.google.com">Shanghaj</a>
-          </div>
-          <div class="city-3" style="width: 10rem">
-            <a href="https://www.google.com">Dubai</a>
-          </div>
-        </div>
-      </div>
-    </div>
- </div>
       
  <div class="signature">
  <p> <a href="https://github.com/Yulija-Kolomiiec/WeatherApp.git" target="_blank">Open-source code</a>  by Yuliia Kolomiiets</p>
