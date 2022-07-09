@@ -3,8 +3,7 @@ body {
   max-width: 60%;
   margin: 0 auto;
   align-items: center;
-  background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
-
+  );
 }
 h1 {
   display: block;
@@ -14,7 +13,7 @@ h1 {
   font-size: large;
 }
 .current-city {
-   font-size: 48px;
+  font-size: 48px;
 }
 form {
   display: block;
@@ -34,7 +33,6 @@ input[type="text"] {
   font-family: "Playfair Display", serif;
   font-family: "Roboto Slab", serif;
   background: transparent;
-
 }
 input[type="submit"] {
   width: 8%;
@@ -65,9 +63,14 @@ input[type="submit"] {
 a {
   text-decoration: none;
 }
+.weather-icon {
+  float: right;
+  margin-top: 16px;
+  margin-right: 32px;
+}
 .card-body-temp .active {
-color: black;
-cursor: default;
+  color: black;
+  cursor: default;
 }
 .weather-details {
   margin-top: 4px;
@@ -83,7 +86,7 @@ li {
   list-style: none;
 }
 .temperature {
-font-size: 44px;
+  font-size: 44px;
 }
 .units {
   font-size: medium;
@@ -91,7 +94,10 @@ font-size: 44px;
   top: -12px;
 }
 .card-body-temp {
-  padding: 2px 16px 6px 16px;
+  padding: 0px 16px 6px 16px;
+}
+.card-body-conditions {
+  padding: 18px 16px 18px 16px;
 }
 .container {
   font-family: "Kaushan Script", cursive;
