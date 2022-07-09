@@ -1,0 +1,122 @@
+body {
+  display: block;
+  max-width: 60%;
+  margin: 0 auto;
+  align-items: center;
+}
+h1 {
+  display: block;
+  font-family: "Kaushan Script", cursive;
+  font-family: "Playfair Display", serif;
+  margin-top: 4px;
+  font-size: large;
+}
+.current-city {
+  font-size: 48px;
+}
+form {
+  display: block;
+  align-items: center;
+  margin-top: 4px;
+  width: 101%;
+}
+
+input[type="text"] {
+  width: 75%;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 4px 8px;
+  font-family: "Kaushan Script", cursive;
+  font-family: "Playfair Display", serif;
+  font-family: "Roboto Slab", serif;
+  background: transparent;
+}
+input[type="submit"] {
+  width: 8%;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: transparent;
+  font-size: medium;
+  font-weight: bold;
+  font-family: "Kaushan Script", cursive;
+  font-family: "Playfair Display", serif;
+  font-family: "Roboto Slab", serif;
+}
+.my-location-button {
+  width: 15%;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgb(224, 243, 205);
+  font-size: medium;
+  font-weight: bold;
+  font-family: "Kaushan Script", cursive;
+  font-family: "Playfair Display", serif;
+  font-family: "Roboto Slab", serif;
+}
+a {
+  text-decoration: none;
+}
+.weather-icon {
+  float: right;
+
+  margin: 16px 20px auto 20px;
+}
+.card-body-temp .active {
+  color: black;
+  cursor: default;
+}
+.weather-details {
+  margin-top: 4px;
+  font-family: "Kaushan Script", cursive;
+  font-family: "Playfair Display", serif;
+  font-size: x-large;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+.temperature {
+  font-size: 44px;
+}
+.units {
+  font-size: medium;
+  position: relative;
+  top: -12px;
+}
+.card-body-temp {
+  padding: 0px 16px 6px 16px;
+}
+.card-body-conditions {
+  padding: 18px 16px 18px 16px;
+}
+.container {
+  font-family: "Kaushan Script", cursive;
+  font-family: "Playfair Display", serif;
+  font-family: "Roboto Slab", serif;
+  font-size: medium;
+  margin-top: 4px;
+  padding: 0;
+}
+.card-body-heading {
+  background-color: #f3faf6;
+  flex: 1 1 auto;
+  text-align: center;
+  padding: 12px;
+}
+
+.signature {
+  margin-top: 12px;
+  font-family: "Kaushan Script", cursive;
+  font-family: "Playfair Display", serif;
+  font-family: "Roboto Slab", serif;
+  font-size: medium;
+}
