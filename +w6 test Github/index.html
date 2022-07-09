@@ -22,26 +22,10 @@
     />
   </head>
   <body>
- <div class="main">
-      <div class="container-location">
-        <div class="row">
-  <div class="col-sm-6">
-    <div class="card" style="background-color: #f3faf6;">
-      <div class="card-body">
-        <p class="card-text" id="current-city"></p>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card" style="background-color: #f3faf6;">
-      <div class="card-body">
-        <p class="card-text" id="current-time">  </p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-  </div>
+ <h1>
+        <p class="current-city" id="current-city"></p>
+        <p class="current-time" id="current-time">  </p>
+</h1>
     
     <form id="search-form">
       <input type="text" id="city-input" placeholder="Enter your city" autofocus />
@@ -52,28 +36,26 @@
     <div class="weather-details"> 
       <div class="container-weather">
         <div class="row">
-  <div class="col-sm-4">
-    <div class="card" style="background-color: #fbfcf3;">
-      <div class="card-body">
-        <p class="card-text">   
+  <div class="col-sm-4" style="padding-right: 2px">
+    <div class="card" style="background-color: transparent;">
+      <div class="card-body-temp">
           <ul>
           <li>
             <span class="temperature" id="temperature">
             </span>
-           <span class = "units"><a href="#" id="celsius-link">°C</a>  |<a href="#" id="fahrenheit-link">°F</a></span>
+           <span class = "units"><a href="#" id="celsius-link" class="active">°C </a>  |<a href="#" id="fahrenheit-link"> °F</a></span>
           </li>
           <li>
             <span class="weather-conditions" id="weather-conditions"></span>
           </li>
         </ul>
-        </p>
       </div>
     </div>
   </div>
-  <div class="col-sm-8">
-    <div class="card" style="background-color: #fbfcf3;">
+  <div class="col-sm-8" style="padding-left: 2px">
+    <div class="card" style="background-color: transparent">
       <div class="card-body">
-        <p class="card-text"> <ul>
+        <ul>
           <li>
 Wind, m/s: <span class="wind-speed" id="wind-speed"></span>
           </li>
@@ -81,7 +63,6 @@ Wind, m/s: <span class="wind-speed" id="wind-speed"></span>
 Humidity, %: <span class="humidity" id="humidity"></span>
           </li>
         </ul>
-        </p>
     </div>
 </div>
     </div>
@@ -92,10 +73,9 @@ Humidity, %: <span class="humidity" id="humidity"></span>
         <div class="card-2">
           <div class="card-body-heading">
             <h5 class="card-title" >May 28, 2022</h5>
-            <p class="card-text">☁️</p>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Weather: ☀️</li>
+          <ul class="list-group list-group-flush" >
+            <li class="list-group-item" >Weather: ☀️</li>
             <li class="list-group-item">t°C: +10 / +21</li>
             <li class="list-group-item">Wind: 8 m/s</li>
           </ul>
@@ -105,7 +85,6 @@ Humidity, %: <span class="humidity" id="humidity"></span>
         <div class="card-2">
           <div class="card-body-heading">
             <h5 class="card-title">May 29, 2022</h5>
-            <p class="card-text">☁️☀️</p>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Weather: ⛅</li>
@@ -118,7 +97,6 @@ Humidity, %: <span class="humidity" id="humidity"></span>
         <div class="card-2">
           <div class="card-body-heading">
             <h5 class="card-title">May 30, 2022</h5>
-            <p class="card-text">🌧️❄️</p>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Weather: ☀️</li>
@@ -131,7 +109,6 @@ Humidity, %: <span class="humidity" id="humidity"></span>
         <div class="card-2">
           <div class="card-body-heading">
             <h5 class="card-title">May 31, 2022</h5>
-            <p class="card-text">⛅</p>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Weather: 🌧️</li>
@@ -144,7 +121,6 @@ Humidity, %: <span class="humidity" id="humidity"></span>
         <div class="card-2">
           <div class="card-body-heading">
             <h5 class="card-title">June 1, 2022</h5>
-            <p class="card-text">⛈️</p>
           </div>
           <ul class="list-group list-group-flush" >
             <li class="list-group-item">Weather: ⛈️</li>

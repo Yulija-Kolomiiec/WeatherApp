@@ -6,7 +6,6 @@ function getCurrentLocation(event) {
 let myLocationButton = document.querySelector("#my-location-button");
 myLocationButton.addEventListener("click", getCurrentLocation);
 
-
 let now = new Date();
 let currentHour = now.getHours();
 if (currentHour < 10) {
@@ -68,6 +67,8 @@ function displayWeatherCondition(response) {
   document.querySelector("#humidity").innerHTML = Math.round(
     response.data.main.humidity
   );
+
+  celciusTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -87,18 +88,21 @@ form.addEventListener("submit", handleSubmit);
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  let temperature = temperatureElement.innerHTML;
-  temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  let farenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(farenheitTemperature);
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  let temperature = temperatureElement.innerHTML;
-  temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round((temperature - 32) / 1.8);
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
 }
+
+let celciusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
@@ -106,10 +110,9 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-searchCity("Warsaw");
-
 function searchLocation(position) {
   let apiKey = "2887bfa7491c9223d63dac89e0056150";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
+searchCity("Warsaw");
