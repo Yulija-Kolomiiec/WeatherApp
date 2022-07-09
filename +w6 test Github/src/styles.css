@@ -3,7 +3,6 @@ body {
   max-width: 60%;
   margin: 0 auto;
   align-items: center;
-  );
 }
 h1 {
   display: block;
@@ -65,8 +64,8 @@ a {
 }
 .weather-icon {
   float: right;
-  margin-top: 16px;
-  margin-right: 32px;
+
+  margin: 16px 20px auto 20px;
 }
 .card-body-temp .active {
   color: black;
