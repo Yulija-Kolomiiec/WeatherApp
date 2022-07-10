@@ -54,7 +54,8 @@ function formatDate(date) {
 let currentTime = document.querySelector("#current-time");
 currentTime.innerHTML = formatDate(now);
 
-function displayForecast() {
+function displayForecast(response) {
+    console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
@@ -81,7 +82,11 @@ function displayForecast() {
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-  console.log(forecastHTML);
+}
+function getForecast(coordinates) {
+  let apiKey = "2887bfa7491c9223d63dac89e0056150";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayWeatherCondition(response) {
@@ -105,6 +110,8 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -152,4 +159,3 @@ function searchLocation(position) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 searchCity("Warsaw");
-displayForecast();
