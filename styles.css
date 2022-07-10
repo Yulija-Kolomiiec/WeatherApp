@@ -98,13 +98,13 @@ li {
 .card-body-conditions {
   padding: 18px 16px 18px 16px;
 }
-.container {
+.card-group {
   font-family: "Kaushan Script", cursive;
   font-family: "Playfair Display", serif;
   font-family: "Roboto Slab", serif;
-  font-size: medium;
+  font-size: large;
   margin-top: 4px;
-  padding: 0;
+  text-align: center;
 }
 
 .signature {
