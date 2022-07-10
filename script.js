@@ -54,6 +54,36 @@ function formatDate(date) {
 let currentTime = document.querySelector("#current-time");
 currentTime.innerHTML = formatDate(now);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="weather-forecast-date">${day}</div>
+        <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          width="42"
+        />
+        </li>
+            <li class="list-group-item">t°C: +10 / +21</li>
+            <li class="list-group-item">Wind: 8 m/s</li>
+          </ul>
+
+      </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 function displayWeatherCondition(response) {
   document.querySelector("#current-city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -122,3 +152,4 @@ function searchLocation(position) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 searchCity("Warsaw");
+displayForecast();

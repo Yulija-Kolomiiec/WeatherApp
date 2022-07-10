@@ -106,12 +106,6 @@ li {
   margin-top: 4px;
   padding: 0;
 }
-.card-body-heading {
-  background-color: #f3faf6;
-  flex: 1 1 auto;
-  text-align: center;
-  padding: 12px;
-}
 
 .signature {
   margin-top: 12px;
